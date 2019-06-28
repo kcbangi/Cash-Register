@@ -1,19 +1,38 @@
 body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 100%;
     height: 100%;
-    background-color: #ffebcd;
-    /* border: 1px solid black; */
+
 }
 header {
+    text-align: center; 
+    height: 28em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(https://images.unsplash.com/photo-1526234362653-3b75a0c07438?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: #fff;
+}
+#divider {
+    height: 2em;
+    padding: 14px;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #eaeaea;
     text-align: center;
-    padding: 30px;
-    font-size: 40px;
 }
 #container{
     width: 320px;
-    height: 520px;
-    margin-left:50px;
-    background: rgb(10, 109, 145);
+    height: 530px;
+    margin: 20px 20px;
+    background: rgb(0, 0, 0);
+    float: left;
 }
 #calculator {
     margin: 10px auto;
@@ -25,22 +44,28 @@ header {
     height: 120px;
     /* border: 1px solid black; */
 }
+#history-value {
+    /* border: 1px solid #e7e7e7; */
+}
 #history {
     text-align: right;
     height: 20px;
     margin: 0 20px;
     padding-top: 20px;
     font-size: 15px;
+    color: white;
 }
 #output {
     text-align: right;
     height: 60px;
     margin: 10px 20px;
     font-size: 30px;
+    color: white;
 }
 #keyboard {
-    /* border: 1px solid black; */
-    height: 375px;
+    /* float: right; */
+    border: 1px solid black;
+    height: 5em;
     margin: 10px 10px;
 }
 button {
@@ -55,4 +80,32 @@ button {
 }
 .number:focus {
     outline: 0;
+}
+#menu {
+    margin-left: 340px;
+    
+}
+#menu1, #menu2 {
+    background: black;
+    text-align: center;
+    height: 250px;
+    margin: 20px 20px;
+    color: white;
+}
+#price1, #price2 {
+    font-size: 30px;
+    float: left;
+    margin: 5px 25px;
+}
+footer {
+    border-top: 1px solid #e7e7e7;
+    background-color: blue;
+    text-align: center;
+}
+
+a {
+    float: right;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
 }
