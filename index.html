@@ -7,66 +7,67 @@
     </head>
 
     <body>
-        <header>
-            <h1>Current Balance: <span id="currentBalance"></span></h1>
-        </header>
         <main>
+            <h1>COFFEE HOUSE</h1>
             <div id="divider">
-            
-            </div>
-            <div id="container">
-                <div id="calculator">
-                    <div id="result">
-                        <div id="history">
-                            <p id="history-value"></p>
+                <div id="container">
+                    <div id="calculator">
+                        <div id="result">
+                            <div id="history">
+                                <p id="history-value"></p>
+                            </div>
+                            <div id="output">
+                                <p id="output-value">0</p>
+                            </div>
                         </div>
-                        <div id="output">
-                            <p id="output-value">0</p>
+                        <div id="keyboard">
+                            <table>
+                                <tr>
+                                    <td><button class="operator" id="clear">C</button></td>
+                                    <td><button class="operator" id="balance">B</button></td>
+                                    <td><button class="operator" id="deposit">D</button></td>
+                                    <td><button class="operator" id="withdraw">W</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="numbers" id="7">7</button></td>
+                                    <td><button class="numbers" id="8">8</button></td>
+                                    <td><button class="numbers" id="9">9</button></td>
+                                    <td><button class="operator" id="/">&#247</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="numbers" id="4">4</button></td>
+                                    <td><button class="numbers" id="5">5</button></td>
+                                    <td><button class="numbers" id="6">6</button></td>
+                                    <td><button class="operator" id="*">&times</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="numbers" id="1">1</button></td>
+                                    <td><button class="numbers" id="2">2</button></td>
+                                    <td><button class="numbers" id="3">3</button></td>
+                                    <td><button class="operator" id="-">-</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="numbers" id="0">0</button></td>
+                                    <td><button class="numbers" id=".">.</button></td>
+                                    <td><button class="operator" id="equal">=</button></td>
+                                    <td><button class="operator" id="+">+</button></td>
+                                </tr>
+                            </table>
                         </div>
-                    </div>
-                    <div id="keyboard">
-                        <table>
-                            <tr>
-                                <td><button class="operator" id="clear">C</button></td>
-                                <td><button class="operator" id="balance">B</button></td>
-                                <td><button class="operator" id="deposit">D</button></td>
-                                <td><button class="operator" id="withdraw">W</button></td>
-                            </tr>
-                            <tr>
-                                <td><button class="numbers" id="7">7</button></td>
-                                <td><button class="numbers" id="8">8</button></td>
-                                <td><button class="numbers" id="9">9</button></td>
-                                <td><button class="operator" id="/">&#247</button></td>
-                            </tr>
-                            <tr>
-                                <td><button class="numbers" id="4">4</button></td>
-                                <td><button class="numbers" id="5">5</button></td>
-                                <td><button class="numbers" id="6">6</button></td>
-                                <td><button class="operator" id="*">&times</button></td>
-                            </tr>
-                            <tr>
-                                <td><button class="numbers" id="1">1</button></td>
-                                <td><button class="numbers" id="2">2</button></td>
-                                <td><button class="numbers" id="3">3</button></td>
-                                <td><button class="operator" id="-">-</button></td>
-                            </tr>
-                            <tr>
-                                <td><button class="numbers" id="0">0</button></td>
-                                <td><button class="numbers" id=".">.</button></td>
-                                <td><button class="operator" id="equal">=</button></td>
-                                <td><button class="operator" id="+">+</button></td>
-                            </tr>
-                        </table>
                     </div>
                 </div>
+                <div class="menu">
+                    <ul>
+                        <li id="menu1"> <span class="price" id="price1">$10</span> <br> <span class="name">Kona Coffee</span></li>
+                        <li id="menu2"> <span class="price" id="price2">$9</span> <br> <span class="name">Blue Mountain</span></li>
+                        <li id="menu3"> <span class="price" id="price3">$8</span> <br> <span class="name">Kenyan AA</span></li>
+                        <li id="menu4"> <span class="price" id="price4">$7</span> <br> <span class="name">Peaberry</span></li>
+                        <li id="menu5"> <span class="price" id="price5">$6</span> <br> <span class="name">Dark Roast Sumatra Mandheling</span></li>
+                    </ul>
+                    </ul>
+                    </ul>
+                </div>
             </div>
-            <div id="menu">
-                <ul>
-                    <li id="menu1"> <br> <span id="price1">$5</span></li>
-                    <li id="menu2"> <br> <span id="price2">$10</span></li>
-                </ul>
-            </div>
-
         </main>
 
         <script src="js/calculator.js"></script>
