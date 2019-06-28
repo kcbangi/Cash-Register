@@ -6,18 +6,19 @@ let calc = calculator();
 let oldDisplay = "";
 let newDisplay = "";
 let operator = "";
+let dolla = 0;
 
+// Small Screen
 let getOldDisplay = document.querySelector("#history-value");
-
 function loadDisplay(num) {
     oldDisplay = num
-    getOldDisplay.innerText = parseInt(oldDisplay);
+    getOldDisplay.innerText = parseFloat(oldDisplay);
 };
 
+// Big Screen
 function getBigDisplay() {
     return document.querySelector("#output-value").innerText;
 };
-// Print while clicking
 function printBigDisplay(num) {
     if(num == "") {
         document.querySelector("output-value").innerText = num;
@@ -39,10 +40,10 @@ function removeComma(num) {
     return Number(num.replace(/,/g,''));
 };
 
-// Print number to the calc with comma
-let number = document.querySelectorAll(".number");
-for(let i = 0; i < number.length; i++) {
-    number[i].addEventListener("click", function() {
+// Print w/ Comma
+let numbers = document.querySelectorAll(".numbers");
+for(let i = 0; i < numbers.length; i++) {
+    numbers[i].addEventListener("click", function() {
         let output = removeComma(getBigDisplay());
         output = output + this.id;
         printBigDisplay(output);
@@ -57,7 +58,6 @@ function clearDisplay(){
     getOldDisplay.innerHTML = oldDisplay ;
 };
 
-// Clear input
 let clear = document.querySelector("#clear");
 clear.addEventListener("click", function() {
     if(this.id === "clear") {
@@ -120,15 +120,36 @@ equal.addEventListener("click", function() {
     };
 });
 
-function getMemory() {
+// Balance
+let getBalance = document.querySelector("#balance");
+getBalance.addEventListener("click", function() {
+    loadDisplay(dolla);
+    console.log("Balance: " + dolla);
+});
 
+// Deposit
+function sooMatchMani() {
+    let depositDolla = calc.add(dolla, newDisplay);
+    return loadDisplay(depositDolla);
+    
 };
-function balance() {
 
-};
-function deposit() {
+let getDeposit = document.querySelector("#deposit");
+getDeposit.addEventListener("click", function() {
+    sooMatchMani();
+    newDisplay = 0;
+    dolla = oldDisplay;
+});
 
+// Withdraw
+function noMani() {
+    let withdrawDolla = calc.subtract(dolla, newDisplay);
+    return loadDisplay(withdrawDolla);
 };
-function widthraw() {
 
-};
+let getWithdraw = document.querySelector("#withdraw");
+getWithdraw.addEventListener("click", function() {
+    noMani();
+    newDisplay = 0;
+    dolla = oldDisplay;
+});

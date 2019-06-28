@@ -13,7 +13,7 @@ function calculator() {
 
     function subtract(x, y) {
         //validator(x,y);
-        total = parseFloat(x) -parseFloat(y);
+        total = parseFloat(x) - parseFloat(y);
         return total;
     }
 

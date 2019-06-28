@@ -1,32 +1,18 @@
+main {
+    height: 100%;
+}
+
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 100%;
+    /* text-align: center;  */
     height: 100%;
-
-}
-header {
-    text-align: center; 
-    height: 28em;
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(https://images.unsplash.com/photo-1526234362653-3b75a0c07438?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80);
     background-size: cover;
     background-position: center;
     position: relative;
 }
-h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3em;
-    color: #fff;
-}
-#divider {
-    height: 2em;
-    padding: 14px;
-    border-bottom: 1px solid #e7e7e7;
-    background-color: #eaeaea;
-    text-align: center;
-}
+
 #container{
     width: 320px;
     height: 530px;
@@ -71,14 +57,14 @@ h1 {
 button {
     font-size:20px;
 }
-.number, .operator{
+.numbers, .operator{
     width: 75px;
     height: 75px;
 }
-.number:active {
+.numbers:active {
     font-size: 10px;
 }
-.number:focus {
+.numbers:focus {
     outline: 0;
 }
 #menu {
@@ -96,16 +82,4 @@ button {
     font-size: 30px;
     float: left;
     margin: 5px 25px;
-}
-footer {
-    border-top: 1px solid #e7e7e7;
-    background-color: blue;
-    text-align: center;
-}
-
-a {
-    float: right;
-    text-decoration: none;
-    color: black;
-    margin-bottom: 10px;
 }
