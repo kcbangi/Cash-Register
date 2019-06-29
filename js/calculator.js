@@ -2,7 +2,7 @@
 
 console.log("CALCULATOR CONNECTED");
 
-function calculator() {
+let calc = (function() {
    
     let total = 0;
    
@@ -33,4 +33,5 @@ function calculator() {
         multiply: multiply,
         divide: divide,
     };
-};
+
+})();
